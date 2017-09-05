@@ -1,17 +1,21 @@
 <div>
    <h1>Chat Log</h1>
+   <p>
+   </p>
    <div class="well" id="messages">
        <%= for log <- @logs do %>
        <div>
            <em title="<%= log.inserted_at %>">
            <b>
-               <%= log.user %>
+               <%= log.user %>:
            </b>
-            <%= if log.message do %>
-               </em>: <%= log.message %>
-            <% else %>
-                EL mensaje esta Vacio.
-            <% end %>
+                <%= # text = String.split(log.message, " ")  %>
+
+                    <%= if Enum.member?(@words, log.message ) do %>
+                        <%=  log.message %> groseria
+                    <% else %>
+                        <%= log.message %>
+                    <% end %>
        </div>
        <% end %>
    </div>
