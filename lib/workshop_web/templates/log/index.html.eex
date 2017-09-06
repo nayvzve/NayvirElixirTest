@@ -9,13 +9,7 @@
            <b>
                <%= log.user %>:
            </b>
-                <%= # text = String.split(log.message, " ")  %>
-
-                    <%= if Enum.member?(@words, log.message ) do %>
-                        <%=  log.message %> groseria
-                    <% else %>
-                        <%= log.message %>
-                    <% end %>
+               <%= log.message %>
        </div>
        <% end %>
    </div>

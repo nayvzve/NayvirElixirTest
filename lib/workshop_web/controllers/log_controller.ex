@@ -5,8 +5,7 @@ defmodule WorkshopWeb.LogController do
    alias Workshop.Chat.Log
 
    def index(conn, _params) do
-       logs = Chat.list_logs()
-       words =  ["gonorrea", "maldi", "puta" , "coño", "verga", "malparido", "pichurria", "guevon", "hijoeputa", "maric"]
-       render(conn, "index.html", logs: logs, words: words)
+    logs = Chat.list_logs()
+    render(conn, "index.html", logs: logs)
    end
 end

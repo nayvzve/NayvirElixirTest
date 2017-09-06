@@ -64,12 +64,8 @@ let messagesContainer = document.querySelector("#messages")
 messageInput.addEventListener("keypress", event => {
     if(event.keyCode === 13){
 
-        var array = ["gonorrea", "maldi", "puta" , "coño", "verga", "malparido", "pichurria", "guevon", "hijoeputa", "maric"];
         var words = messageInput.value;
-        for(var i = 0; i < array.length; i ++){
-            var words = words.replace(array[i], "@#%&@!")
-        }
-        channel.push("shout", {user_name: nameInput.value, user_message: words})
+        channel.push("shout", {user_name: nameInput.value, user_message: words })
         messageInput.value = ""
     }
 })

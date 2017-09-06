@@ -43,20 +43,21 @@ defmodule WorkshopWeb do
     end
   end
 
-  def router do
-    quote do
-      use Phoenix.Router
-      import Plug.Conn
-      import Phoenix.Controller
+    def router do
+        quote do
+          use Phoenix.Router
+          import Plug.Conn
+          import Phoenix.Controller
+        end
     end
-  end
 
-  def channel do
-    quote do
-      use Phoenix.Channel
-      import WorkshopWeb.Gettext
+    def channel do
+        quote do
+          use Phoenix.Channel
+          import WorkshopWeb.Gettext
+        end
     end
-  end
+
 
   @doc """
   When used, dispatch to the appropriate controller/view/etc.

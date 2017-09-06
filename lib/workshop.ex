@@ -1,4 +1,5 @@
 defmodule Workshop do
+
   @moduledoc """
   Workshop keeps the contexts that define your domain
   and business logic.
